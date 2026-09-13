@@ -1,0 +1,710 @@
+Act as a senior Laravel developer, LMS/Quiz architect, database engineer, and educational content engineer.
+
+I need you to create a complete, production-ready quiz seeder system for my Finance NotesTime Laravel project.
+
+PROJECT PATH:
+ /home/dracula/Downloads/Project/Laravel/Finance.NotesTime.in
+
+BLADE CONTENT ROOT:
+ /home/dracula/Downloads/Project/Laravel/Finance.NotesTime.in/resources/views/frontend/service/business-finance/business-finance-basic-terms
+
+EXISTING SEEDER TO FOLLOW:
+ PrivateLimitedCompanyRegistrationProcessQuizSeeder.php
+
+
+IMPORTANT:
+DO NOT START CODING OR CREATING SEEDERS IMMEDIATELY.
+
+FIRST inspect the actual project and understand the existing architecture.
+
+
+==================================================
+1. INSPECT ALL BLADE FILES
+==================================================
+
+Recursively scan EVERY .blade.php file inside:
+
+resources/views/frontend/service/business-finance/business-finance-basic-terms
+
+Do not assume the number of modules or topics.
+
+For every Blade file identify:
+
+- Full Blade file path
+- Filename
+- Module number
+- Module name
+- Topic/lesson name
+- Topic order
+- Module order
+- Main content
+- Definitions
+- Important concepts
+- Processes
+- Rules
+- Examples
+- Comparisons
+- Important facts
+
+Build a complete mapping:
+
+Product
+  └── Module
+       └── Topic/Lesson
+            └── Blade file
+                 └── Quiz questions
+
+
+==================================================
+2. INSPECT EXISTING QUIZ IMPLEMENTATION
+==================================================
+
+Find and inspect:
+
+PrivateLimitedCompanyRegistrationProcessQuizSeeder.php
+
+Use it as the primary structural reference.
+
+Also inspect:
+
+- Quiz migrations
+- Question migrations
+- Option/answer migrations
+- Quiz model
+- Question model
+- Option model
+- Controllers
+- Services
+- Repositories if available
+- Policies/Gates
+- Quiz routes
+- Admin quiz management
+- Student quiz pages
+- Quiz attempt system
+- Quiz result system
+- Existing quiz seeders
+- DatabaseSeeder.php
+
+Determine the REAL database schema.
+
+DO NOT invent fields such as:
+
+quiz_id
+module_id
+topic_id
+question_type
+correct_answer
+start_time
+location
+
+unless those fields actually exist.
+
+Follow the existing project's real structure.
+
+
+==================================================
+3. MODULE-WISE QUIZ REQUIREMENT
+==================================================
+
+For EVERY module discovered from the Blade files:
+
+Create a separate module-wise quiz seeder.
+
+Every module quiz must contain MINIMUM 15 QUESTIONS:
+
+5 SINGLE CHOICE
+5 TRUE/FALSE
+5 MULTIPLE CHOICE
+
+Therefore:
+
+TOTAL MINIMUM PER MODULE = 15 QUESTIONS
+
+
+Example structure only:
+
+Module 01
+  ├── 5 Single Choice
+  ├── 5 True/False
+  └── 5 Multiple Choice
+
+Module 02
+  ├── 5 Single Choice
+  ├── 5 True/False
+  └── 5 Multiple Choice
+
+Continue for EVERY module actually found.
+
+Do not skip a module.
+
+
+==================================================
+4. PRODUCT-WISE QUIZ
+==================================================
+
+Create ONE additional comprehensive product/service-wise quiz covering ALL modules.
+
+Minimum:
+
+25 SINGLE CHOICE
+10 TRUE/FALSE
+25 MULTIPLE CHOICE
+
+TOTAL = MINIMUM 60 QUESTIONS
+
+Required distribution:
+
+Single Choice: 25+
+True/False: 10+
+Multiple Choice: 25+
+
+Total: 60+
+
+
+IMPORTANT:
+
+The product-wise quiz must NOT simply duplicate the module quiz questions.
+
+Create a separate comprehensive question set based on the entire Blade content.
+
+Ensure the product quiz represents all available modules/topics proportionally.
+
+
+==================================================
+5. QUESTION SOURCE
+==================================================
+
+Questions MUST be generated from the actual Blade content.
+
+For each module:
+
+1. Read every Blade file belonging to the module.
+2. Understand the content.
+3. Identify important learning points.
+4. Generate questions from those learning points.
+5. Associate each question with the correct module/topic where supported.
+
+DO NOT:
+
+- Invent modules
+- Invent topics
+- Generate unrelated questions
+- Use random generic finance questions
+- Copy large paragraphs from Blade files
+- Create duplicate questions unnecessarily
+
+
+==================================================
+6. SINGLE CHOICE
+==================================================
+
+Each Single Choice question must have:
+
+- 1 question
+- 4 options
+- Exactly 1 correct answer
+- Explanation
+- Correct question type according to the existing schema
+- Correct module/topic association
+- Appropriate difficulty
+
+
+==================================================
+7. TRUE/FALSE
+==================================================
+
+Each True/False question must contain:
+
+- True
+- False
+- Exactly 1 correct answer
+- Clear statement
+- Explanation
+
+Avoid ambiguous statements.
+
+
+==================================================
+8. MULTIPLE CHOICE
+==================================================
+
+Each Multiple Choice question must contain:
+
+- At least 4 options unless existing system requires otherwise
+- At least 2 correct answers
+- At least 1 incorrect answer
+- Clear explanation
+- Correct multiple-answer representation according to the existing database
+
+IMPORTANT:
+
+Do not accidentally create a multiple-choice question with only one correct answer.
+
+
+==================================================
+9. QUESTION QUALITY
+==================================================
+
+Questions must be educational and high quality.
+
+Include a mixture of:
+
+- Definitions
+- Concepts
+- Important facts
+- Processes
+- Procedures
+- Rules
+- Comparisons
+- Practical situations
+- Application-based questions
+- Understanding-based questions
+
+Avoid:
+
+- Duplicate questions
+- Reworded duplicates
+- Obvious answers
+- Ambiguous questions
+- Incorrect facts
+- Unnecessarily complicated wording
+- Always putting the correct answer in option A
+
+
+==================================================
+10. DIFFICULTY
+==================================================
+
+If the existing system supports difficulty, use:
+
+Easy
+Medium
+Hard
+
+Recommended distribution:
+
+40% Easy
+40% Medium
+20% Hard
+
+Hard questions should test understanding/application, not obscure information.
+
+
+==================================================
+11. MODULE/TOPIC ASSOCIATION
+==================================================
+
+Where the existing database supports it, maintain:
+
+Product/Service
+    ↓
+Module
+    ↓
+Topic/Lesson
+    ↓
+Quiz
+    ↓
+Question
+    ↓
+Options
+
+Every question should be traceable to its source module/topic.
+
+Do NOT create unnecessary new tables or relationships if the existing architecture already provides the required relationship.
+
+
+==================================================
+12. START TIME CONFIGURATION
+==================================================
+
+I need a configurable START TIME option in the quiz seeder.
+
+FIRST inspect the existing quiz schema.
+
+If the project already has a field such as:
+
+- start_time
+- starts_at
+- available_from
+- scheduled_at
+
+use the existing field.
+
+Make the seeder configuration easy to modify, for example:
+
+$quizConfig = [
+    'start_time' => null,
+];
+
+BUT use the ACTUAL field name from the project.
+
+If start-time functionality does not exist:
+
+- Identify what is missing.
+- Determine the minimum required migration/model/controller changes.
+- Implement only what is necessary.
+- Do not randomly invent a database field.
+
+
+==================================================
+13. LOCATION CONFIGURATION
+==================================================
+
+I also want an optional LOCATION configuration in the seeder.
+
+FIRST inspect whether the existing quiz system supports:
+
+- location
+- location_id
+- region
+- country
+- similar existing field
+
+If supported, expose it in the seeder configuration.
+
+For example:
+
+$quizConfig = [
+    'start_time' => null,
+    'location' => null,
+];
+
+Again, use the ACTUAL project schema.
+
+Do not create duplicate location architecture.
+
+
+==================================================
+14. SEEDER STRUCTURE
+==================================================
+
+Follow the exact coding style and architecture of:
+
+PrivateLimitedCompanyRegistrationProcessQuizSeeder.php
+
+Create meaningful module-specific seeder names based on the ACTUAL discovered modules.
+
+Example only:
+
+BusinessFinanceBasicTermsQuizSeeder.php
+BusinessFinanceModule02QuizSeeder.php
+BusinessFinanceModule03QuizSeeder.php
+BusinessFinanceProductQuizSeeder.php
+
+Do NOT blindly use these names.
+
+Use the real module names discovered from Blade files.
+
+
+==================================================
+15. IDEMPOTENCY
+==================================================
+
+Seeders should safely handle repeated execution according to the existing project's conventions.
+
+Prevent duplicate:
+
+- Quizzes
+- Questions
+- Options
+- Associations
+
+Inspect the existing seeders and use the same approach, such as:
+
+firstOrCreate()
+updateOrCreate()
+
+or another existing project pattern.
+
+DO NOT wipe production data.
+
+DO NOT use destructive database resets.
+
+
+==================================================
+16. DATABASESEEDER
+==================================================
+
+Inspect:
+
+database/seeders/DatabaseSeeder.php
+
+Register all new seeders correctly.
+
+Respect dependency order.
+
+Do not register the same seeder twice.
+
+
+==================================================
+17. VALIDATION
+==================================================
+
+Before finishing, programmatically verify every module.
+
+For EACH module:
+
+Single Choice >= 5
+True/False >= 5
+Multiple Choice >= 5
+TOTAL >= 15
+
+For PRODUCT QUIZ:
+
+Single Choice >= 25
+True/False >= 10
+Multiple Choice >= 25
+TOTAL >= 60
+
+
+Also verify:
+
+Single Choice:
+Exactly 1 correct answer
+
+True/False:
+Exactly 1 correct answer
+
+Multiple Choice:
+At least 2 correct answers
+At least 1 incorrect answer
+
+
+==================================================
+18. DUPLICATE CHECK
+==================================================
+
+Check for duplicate or near-duplicate questions.
+
+Especially ensure the 60+ product-wise questions are not simply copies of module questions.
+
+The product quiz should provide broad coverage of the entire product.
+
+
+==================================================
+19. BLADE SOURCE MAPPING
+==================================================
+
+Maintain a clear mapping for development/reference.
+
+Example:
+
+Seeder:
+BusinessFinanceBasicTermsQuizSeeder.php
+
+Module:
+Module 01 - Actual Module Name
+
+Blade sources:
+resources/views/frontend/service/business-finance/business-finance-basic-terms/...
+
+Topics:
+1. Actual Topic
+2. Actual Topic
+3. Actual Topic
+
+Question count:
+15+
+
+
+For product quiz:
+
+Seeder:
+BusinessFinanceProductQuizSeeder.php
+
+Source:
+All discovered module Blade files
+
+Question count:
+60+
+
+
+Do not store filesystem paths in the database unless the existing application already requires this.
+
+
+==================================================
+20. TEST THE IMPLEMENTATION
+==================================================
+
+After implementation, inspect and run appropriate commands.
+
+At minimum:
+
+php artisan migrate:status
+
+Then test individual seeders safely:
+
+php artisan db:seed --class=SeederName
+
+Do NOT run:
+
+php artisan migrate:fresh
+php artisan db:wipe
+php artisan db:reset
+
+unless explicitly requested.
+
+Also inspect:
+
+php artisan route:list
+
+Run the existing test suite if available.
+
+
+==================================================
+21. VERIFY FRONTEND
+==================================================
+
+After seeding, verify:
+
+- Admin quiz listing
+- Quiz creation/display
+- Student quiz listing
+- Quiz start
+- Single Choice rendering
+- True/False rendering
+- Multiple Choice rendering
+- Answer submission
+- Multiple-answer scoring
+- Quiz attempts
+- Quiz results
+- Module associations
+- Product quiz
+
+Do not break existing functionality.
+
+
+==================================================
+22. IMPORTANT: DO NOT GUESS
+==================================================
+
+If something does not match the existing architecture:
+
+STOP and inspect the actual implementation.
+
+Do not guess:
+
+- database fields
+- relationships
+- model names
+- question types
+- option structure
+- scoring logic
+- start-time fields
+- location fields
+- module structure
+
+
+==================================================
+23. REQUIRED WORKFLOW
+==================================================
+
+Follow this exact workflow:
+
+1. Scan all Blade files
+2. Build complete Module → Topic → Blade mapping
+3. Inspect existing PrivateLimitedCompanyRegistrationProcessQuizSeeder.php
+4. Inspect quiz database schema
+5. Inspect quiz models
+6. Inspect controllers/services
+7. Inspect existing seeders
+8. Determine actual architecture
+9. Create module-wise question sets
+10. Create module-wise seeders
+11. Create separate 60+ question product-wise quiz
+12. Add start_time configuration using existing architecture
+13. Add location configuration using existing architecture
+14. Register seeders
+15. Validate question counts
+16. Validate answer correctness
+17. Check duplicate questions
+18. Run seeders safely
+19. Verify database records
+20. Verify admin/student quiz functionality
+21. Run tests
+22. Report all changes
+
+
+==================================================
+24. FINAL REPORT
+==================================================
+
+At the end provide:
+
+### Blade Analysis
+- Total Blade files
+- Modules discovered
+- Topics discovered
+- Files under each module
+
+### Module Quiz Seeders
+For every module:
+
+Module Name:
+Seeder:
+Blade Sources:
+Topics:
+Single Choice:
+True/False:
+Multiple Choice:
+Total:
+
+### Product Quiz
+Seeder:
+Modules Covered:
+Single Choice: 25+
+True/False: 10+
+Multiple Choice: 25+
+Total: 60+
+
+### Configuration
+Show:
+
+start_time:
+location:
+status:
+difficulty:
+
+### Files Created
+List every new file.
+
+### Files Modified
+List every modified file.
+
+### Database Changes
+List migrations/schema changes, if any.
+
+### Validation
+Report:
+
+- Question count validation
+- Correct-answer validation
+- Duplicate check
+- Module/topic association check
+- Seeder execution
+- Database integrity
+- Tests
+
+### IMPORTANT FINAL RULE
+
+Do not simply create a few sample questions.
+
+I require REAL, COMPLETE seeders based on ALL actual Blade files in:
+
+/home/dracula/Downloads/Project/Laravel/Finance.NotesTime.in/resources/views/frontend/service/business-finance/business-finance-basic-terms
+
+Every discovered module must receive:
+
+5 Single Choice
+5 True/False
+5 Multiple Choice
+
+And the complete product/service must receive:
+
+25 Single Choice
+10 True/False
+25 Multiple Choice
+
+Minimum total product quiz = 60 questions.
+
+First inspect. Then understand. Then implement. Then validate.

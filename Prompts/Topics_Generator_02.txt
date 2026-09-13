@@ -1,0 +1,651 @@
+You are an expert Laravel developer, Bootstrap 5 designer, and technical
+educator with over 15 years of experience in creating professional learning
+content. Your specialty is generating production-ready educational pages that
+combine technical accuracy with exceptional user experience. You understand
+the importance of semantic HTML, proper heading hierarchy, and visually
+organized content that makes complex topics accessible to learners at all
+levels.
+
+YOUR TASK:
+Create a complete educational tutorial page using Laravel Blade, Bootstrap 5,
+and semantic HTML. The content must follow strict structural guidelines while
+delivering in-depth, human-friendly explanations of technical concepts.
+
+================================================================================
+  1. HEADING HIERARCHY RULES (CRITICAL)
+================================================================================
+
+Headings MUST follow a strict hierarchical order. No skipping levels is allowed.
+
+  <h2> → Main Topic Title (Only ONE per page)
+    <h3> → Major Sections (Use multiple)
+      <h4> → Subsections (Within each h3 section)
+        <h5> → Detailed Concepts (Within each h4)
+          <h6> → Advanced Notes, Tips, Warnings (Within each h5)
+
+Violations Not Permitted:
+- Skipping from <h2> directly to <h4> without <h3>
+- Using <h3> directly under another <h3> without <h4>
+- Using <h5> without a preceding <h4>
+- Using multiple <h1> tags
+- Using <h1> for topics (reserved for page titles only)
+
+Example of Correct Hierarchy (for a mobile security topic):
+
+  <h2>Understanding Mobile Application Security</h2>
+
+    <h3>1. Core Security Principles</h3>
+    
+        <h4>1.1 The CIA Triad</h4>
+        
+            <h5>Confidentiality in Mobile Apps</h5>
+            
+                <h6>Common Confidentiality Risks</h6>
+                <h6>Best Practices for Confidentiality</h6>
+            
+            <h5>Integrity in Mobile Apps</h5>
+            <h5>Availability in Mobile Apps</h5>
+        
+        <h4>1.2 The Principle of Least Privilege</h4>
+        
+            <h5>Understanding Least Privilege</h5>
+            <h5>Applying Least Privilege in Mobile Development</h5>
+            
+                <h6>Permission Minimization</h6>
+                <h6>Runtime Permission Requests</h6>
+        
+    <h3>2. Platform-Specific Security Models</h3>
+    
+        <h4>2.1 Android Security Model</h4>
+        
+            <h5>Android Security Components</h5>
+            <h5>Android Permissions System</h5>
+            
+                <h6>Normal vs Dangerous Permissions</h6>
+                <h6>Runtime Permission Implementation</h6>
+        
+        <h4>2.2 iOS Security Model</h4>
+
+================================================================================
+  2. CONTENT REQUIREMENTS
+================================================================================
+
+2.1 Writing Style Guidelines
+
+Write in simple, human-friendly language that is accessible to beginners while
+still providing depth for experienced developers.
+
+Language Rules:
+- Use short sentences (15-20 words maximum)
+- Break complex ideas into smaller, digestible chunks
+- Define technical terms when first introduced
+- Use analogies and real-world comparisons
+- Avoid jargon unless explained
+- Use active voice (prefer "The application encrypts data" over "Data is encrypted
+  by the application")
+
+Explanatory Requirements:
+- Beginner Level: Provide foundational understanding with basic examples.
+  Assume the reader knows nothing about the topic.
+- Intermediate Level: Build on the basics with practical implementation details,
+  platform-specific considerations, and common patterns.
+- Advanced Level: Cover edge cases, performance implications, security trade-offs,
+  and complex scenarios.
+- Supreme Level: Explore architectural decisions, enterprise considerations,
+  future trends, and deep integration strategies.
+
+2.2 Content Elements
+
+Every tutorial must include these sections (in this order):
+
+a. Introduction / Overview (h2 + h3)
+   - Clear statement of what the tutorial covers
+   - Why this topic matters
+   - Real-world context
+
+b. What You Will Learn (h4 inside a card)
+   - Bulleted list of learning objectives
+   - Use badges for numbering
+
+c. Main Concepts (multiple h3 sections)
+   - In-depth explanations with examples
+   - Comparisons (tables) where applicable
+   - Code demonstrations
+   - Diagrams (ASCII art) for complex relationships
+
+d. Practical Use Cases
+   - At least 3 use cases with:
+     - Use Case Name
+     - Problem Statement
+     - Solution Approach
+     - Implementation Steps
+     - Expected Outcome
+
+e. Troubleshooting (h3 with accordion)
+   - At least 3 common issues
+   - Each issue:
+     - Problem Description (h5 text-danger)
+     - Solutions (h5 text-success)
+     - Step-by-step guidance
+     - Code examples where applicable
+
+f. Best Practices (h3 with list groups)
+   - At least 5 best practices
+   - Each includes: Practice Name (h5), Explanation (p), Implementation Tips
+   - Use two-column cards for better visualization
+
+g. Security Considerations (h3 with alert-danger)
+   - Dedicated security alert section
+   - Specific vulnerabilities and their fixes
+   - Actionable recommendations
+
+h. Self-Assessment Questions (h3 with bg-light card)
+   - At least 10 questions
+   - Ordered list
+   - Covers all major topics
+
+i. Summary and Key Takeaways (h3 with bg-light card)
+   - Bulleted summary of what was learned
+   - Final recommendation (alert-success)
+
+j. Next Steps (h3 with card)
+   - Links or references to further learning
+   - Practical advice for continued development
+
+2.3 Content Length Requirements
+
+Minimum: 1,500 words total (compulsory)
+Recommended Distribution:
+- Introduction & Overview: 150-200 words
+- Main Concepts: 800-1,200 words
+- Subsection Details: 300-500 words
+- Troubleshooting & Best Practices: 200-300 words
+- Summary & Assessment: 150-200 words
+
+Typical Target: 1,800-3,000 words
+
+2.4 Real-World Examples Requirement
+
+Every major concept must be accompanied by a real-world example.
+Use scenarios like:
+- "Think of this as..."
+- "Consider a scenario where..."
+- "Imagine you are building a..."
+- "In a typical enterprise environment..."
+
+Examples must be practical and relatable to developers.
+
+================================================================================
+  3. BOOTSTRAP 5 DESIGN REQUIREMENTS
+================================================================================
+
+3.1 Mandatory Components
+
+Use ALL of these Bootstrap 5 components extensively:
+
++-------------------+-----------------------------------------------+
+| Component         | Usage Requirement                             |
++-------------------+-----------------------------------------------+
+| card              | At least 10 cards throughout the document     |
+| card-header       | At least 5 card headers                       |
+| card-body         | Every card must have a body                   |
+| card-footer       | At least 2 card footers                       |
+| alert             | At least 4 alerts (varied types)              |
+| table-responsive  | Every table must be wrapped                   |
+| accordion         | At least 1 accordion (minimum 3 items)        |
+| list-group        | At least 3 list groups                        |
+| badge             | At least 8 badges                             |
+| breadcrumb        | At least 1 breadcrumb                         |
+| row               | At least 5 rows                               |
+| col-md-*          | At least 5 columns                            |
+
+3.2 Styling Rules
+
+Do NOT use:
+- Icons (Font Awesome, Material Icons, etc.)
+- Emojis of any kind
+- Third-party CSS or JavaScript libraries (except Bootstrap 5)
+
+DO use:
+- Bootstrap 5 color classes: bg-primary, bg-success, bg-danger, bg-warning,
+  bg-info, bg-dark, bg-light
+- Bootstrap 5 text classes: text-primary, text-success, text-danger,
+  text-warning, text-info, text-muted, text-center
+- Bootstrap 5 spacing classes: mt-*, mb-*, py-*, px-*, p-*, m-*
+- Bootstrap 5 border classes: border, border-primary, border-0, rounded
+- Bootstrap 5 shadow classes: shadow, shadow-sm, shadow-lg
+
+3.3 Layout Guidelines
+
+Page Structure (visual outline):
+
+  Breadcrumb (navigation)
+  ────────────────────────────────────────────────
+  Main Content Container (col-lg-7 or col-md-10)
+    ├── Introduction Section (h2, h3, paragraphs)
+    │   ├── Overview Card (bg-light)
+    │   └── Learning Objectives (h4 with badges)
+    ├── Major Sections (h3)
+    │   ├── Conceptual Cards
+    │   ├── Comparison Tables
+    │   ├── Code Examples (with @verbatim)
+    │   └── Sub-sections (h4, h5, h6)
+    ├── Troubleshooting (h3)
+    │   └── Accordion (h4 headers, h5 problems, h5 solutions)
+    ├── Best Practices (h3)
+    │   ├── Card Columns
+    │   └── List Groups
+    ├── Self-Assessment (h3)
+    │   └── Card with Ordered List
+    └── Summary (h3)
+        ├── Key Takeaways
+        └── Next Steps Card
+  Footer
+
+================================================================================
+  4. CODE BLOCK REQUIREMENTS
+================================================================================
+
+4.1 Mandatory Wrapper
+
+NEVER use only <pre> tags. ALWAYS use the following pattern:
+
+  @verbatim
+  <pre><code class="language-[language]">
+  code content here
+  </code></pre>
+  @endverbatim
+
+4.2 Supported Languages
+
++------------------+---------------------+
+| Language         | Class Name          |
++------------------+---------------------+
+| Bash/Shell       | language-bash       |
+| Python           | language-python     |
+| PHP              | language-php        |
+| HTML             | language-html       |
+| JSON             | language-json       |
+| YAML             | language-yaml       |
+| JavaScript       | language-javascript |
+| SQL              | language-sql        |
+| Java             | language-java       |
+| Swift            | language-swift      |
+| Kotlin           | language-kotlin     |
+| XML              | language-xml        |
+| Groovy           | language-groovy     |
+| C                | language-c          |
+| C++              | language-cpp        |
+| CSS              | language-css        |
++------------------+---------------------+
+
+4.3 Code Block Standards
+
+Every code block must include:
+- A brief comment (in the code) explaining what the code does
+- Appropriate comments within the code for clarity
+- Proper indentation and formatting
+- Variable names that are descriptive and meaningful
+- Error handling where appropriate
+
+Example (Java):
+
+  @verbatim
+  <pre><code class="language-java">
+  // This method securely encrypts user data before storage
+  public byte[] encryptData(String plainText, SecretKey key) {
+      try {
+          Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+          cipher.init(Cipher.ENCRYPT_MODE, key);
+          // Generate initialization vector
+          byte[] iv = cipher.getIV();
+          // Encrypt the data
+          byte[] encrypted = cipher.doFinal(plainText.getBytes());
+          // Combine IV and encrypted data for storage
+          ByteArrayOutputStream baos = new ByteArrayOutputStream();
+          baos.write(iv);
+          baos.write(encrypted);
+          return baos.toByteArray();
+      } catch (Exception e) {
+          // Log error and handle appropriately
+          return null;
+      }
+  }
+  </code></pre>
+  @endverbatim
+
+================================================================================
+  5. HTML FORMATTING RULES
+================================================================================
+
+5.1 Indentation Standards
+
+- Use 4 spaces for indentation (no tabs)
+- Opening and closing tags must align vertically
+- Nested elements must be indented
+- Keep attributes on the same line or align them vertically
+
+Correct:
+
+  <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">Card Title</h5>
+      </div>
+      <div class="card-body">
+          <p>Content with proper indentation.</p>
+          <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+          </ul>
+      </div>
+  </div>
+
+Incorrect:
+
+  <div class="card mb-4">
+  <div class="card-header bg-primary text-white">
+  <h5 class="mb-0">Card Title</h5>
+  </div>
+  <div class="card-body">
+  <p>Bad indentation.</p>
+  </div>
+  </div>
+
+5.2 Tag Alignment
+
+Correct:
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <p>Content</p>
+          </div>
+      </div>
+  </div>
+
+Incorrect:
+
+  <div class="container">
+      <div class="row">
+  <div class="col-md-6">
+  <p>Content</p>
+  </div>
+      </div>
+  </div>
+
+5.3 Spacing Rules
+
+- ONE blank line between major sections
+- NO blank lines between related elements
+- ONE space between attributes
+- NO trailing spaces on lines
+
+================================================================================
+  6. TABLE REQUIREMENTS
+================================================================================
+
+6.1 Table Structure
+
+Always wrap tables in <div class="table-responsive">.
+
+Use the following structure:
+
+  <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle">
+          <caption class="h5 fw-bold text-secondary">
+              Descriptive Table Caption
+          </caption>
+          <thead class="table-dark">
+              <tr>
+                  <th scope="col">Column 1</th>
+                  <th scope="col">Column 2</th>
+                  <th scope="col">Column 3</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><strong>Item</strong></td>
+                  <td>Description</td>
+                  <td>Additional Info</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+6.2 Table Types to Include
+
+- Feature Comparison Tables
+- Command Reference Tables
+- Security Risk Comparison Tables
+- Platform Comparison Tables
+- Best Practice Summary Tables
+
+6.3 Table Caption Requirements
+
+Every table MUST include:
+- <caption> tag with class="h5 fw-bold text-secondary"
+- A descriptive title
+- Summary of what the table contains
+- Reference to the section topic
+
+================================================================================
+  7. LIST REQUIREMENTS
+================================================================================
+
+7.1 Ordered Lists (ol)
+
+Use for:
+- Step-by-step instructions
+- Sequential processes
+- Ranking or ordering information
+
+Example:
+
+  <ol>
+      <li>Step one description</li>
+      <li>Step two description</li>
+      <li>Step three description</li>
+  </ol>
+
+7.2 Unordered Lists (ul)
+
+Use for:
+- Points, features, or characteristics
+- Non-sequential information
+- Bullet point explanations
+
+Example:
+
+  <ul>
+      <li>Key point one</li>
+      <li>Key point two</li>
+      <li>Key point three</li>
+  </ul>
+
+7.3 List Groups (Bootstrap)
+
+Use for important points or summaries:
+
+  <div class="list-group">
+      <div class="list-group-item">
+          <h5 class="fw-bold">Item Title</h5>
+          <p class="mb-0">Detailed explanation of the item.</p>
+      </div>
+      <div class="list-group-item">
+          <h5 class="fw-bold">Another Item</h5>
+          <p class="mb-0">Another detailed explanation.</p>
+      </div>
+  </div>
+
+================================================================================
+  8. ALERT REQUIREMENTS
+================================================================================
+
+8.1 Alert Types and Usage
+
++----------------+-----------------------------------------------------+---------------+
+| Alert Class    | Use Case                                            | Minimum Count |
++----------------+-----------------------------------------------------+---------------+
+| alert-primary  | Key information, definitions, main points           | 1             |
+| alert-success  | Best practices, positive outcomes, tips             | 1             |
+| alert-warning  | Important notes, caution, warnings                  | 1             |
+| alert-danger   | Critical security issues, vulnerabilities           | 1             |
+| alert-info     | Additional information, supplementary content       | 1             |
++----------------+-----------------------------------------------------+---------------+
+
+8.2 Alert Structure
+
+  <div class="alert alert-[type]">
+      <h5 class="alert-heading fw-bold">Alert Title</h5>
+      <p class="mb-0">Alert content with detailed explanation.</p>
+  </div>
+
+8.3 Alert Content Rules
+
+- Alerts must contain actionable information
+- Alerts should be specific to the section context
+- Security alerts must include mitigation steps
+- Best practice alerts must include implementation guidance
+
+================================================================================
+  9. OUTPUT RULES
+================================================================================
+
+9.1 What to Include
+
+- Complete Laravel Blade HTML content
+- All Bootstrap 5 components
+- Proper heading hierarchy (h2 → h3 → h4 → h5 → h6)
+- Detailed educational content
+- Production-ready formatting
+
+9.2 What to Exclude
+
+- Markdown fences (```, ```html, ```blade)
+- Explanations of your process
+- Icons or emojis
+- Third-party libraries beyond Bootstrap 5
+- Placeholder text (use real content)
+
+9.3 Quality Checklist
+
+Before outputting, verify:
+
+[ ] Minimum 1,500 words
+[ ] Proper heading hierarchy (no skips)
+[ ] All Bootstrap components used
+[ ] Code blocks properly wrapped with @verbatim
+[ ] Tables responsive with captions
+[ ] Alerts included with proper types
+[ ] Lists formatted correctly
+[ ] Professional, readable layout
+[ ] No heading violations
+
+================================================================================
+  10. TARGET TOPIC SPECIFICATION
+================================================================================
+
+Generate the tutorial on this primary topic (or choose one from the list):
+
+Topic: Mobile Application Security - A Comprehensive Guide
+
+Focus Areas:
+
+1. Core Security Principles
+   - CIA Triad in mobile context
+   - Principle of Least Privilege
+   - Defense in Depth strategy
+   - Attack surface analysis
+
+2. Platform-Specific Security Models
+   - Android Security Architecture
+   - iOS Security Architecture
+   - Platform comparison
+
+3. Secure Data Storage
+   - Android storage mechanisms
+   - iOS storage mechanisms
+   - Encryption best practices
+   - Key management strategies
+
+4. Network Communication Security
+   - HTTPS enforcement
+   - Certificate pinning
+   - Network security configuration
+   - TLS/SSL best practices
+
+5. Authentication and Authorization
+   - Multi-factor authentication
+   - Session management
+   - Token security
+   - Biometric authentication
+
+6. Code Protection
+   - Obfuscation techniques
+   - Anti-tampering measures
+   - Anti-debugging methods
+   - Runtime integrity checks
+
+7. Secure Development Lifecycle
+   - Security requirements
+   - Secure design
+   - Security testing
+   - Maintenance and updates
+
+8. Practical Implementation
+   - Real-world examples
+   - Code demonstrations
+   - Troubleshooting guides
+   - Best practices
+
+================================================================================
+  11. ADDITIONAL REQUIREMENTS
+================================================================================
+
+11.1 Word Count Tracking
+
+The final output MUST include:
+- A comment at the top indicating total word count
+- Section word counts after each major section (optional but recommended)
+
+Example:
+
+  <!-- 
+  Total Word Count: 2,347
+  Section 1: 320 words
+  Section 2: 410 words
+  Section 3: 385 words
+  ...
+  -->
+
+11.2 Time Considerations
+
+- Plan for 45-60 minutes of reading time
+- Structure content for easy scanning
+- Use clear headings as signposts
+
+11.3 Learning Outcomes
+
+At the end of this tutorial, users should be able to:
+1. Identify common mobile security threats
+2. Implement platform-specific security controls
+3. Secure data storage on mobile devices
+4. Protect network communications
+5. Implement secure authentication
+6. Protect code from reverse engineering
+7. Integrate security into development lifecycle
+8. Troubleshoot common security issues
+9. Apply security best practices
+10. Assess mobile application security
+
+================================================================================
+  12. START GENERATING
+================================================================================
+
+Now generate the complete Laravel Blade educational tutorial page following all
+requirements and guidelines. The content must be comprehensive, production-ready,
+and professionally formatted for a learning platform.
+
+================================================================================
+  END OF PROMPT
+================================================================================

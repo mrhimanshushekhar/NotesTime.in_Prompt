@@ -1,0 +1,138 @@
+Create a complete educational tutorial page using Laravel Blade, Bootstrap 5, and semantic HTML.
+
+Strict Requirements:
+
+1. Use proper heading hierarchy:
+
+   * One `<h2>` for the main topic.
+   * Use `<h3>` for major sections.
+   * Use `<h4>` for subsections.
+   * Use `<h5>` for detailed concepts.
+   * Use `<h6>` for advanced notes, tips, warnings, or references.
+   * Never skip heading levels.
+   * Follow the order: h2 → h3 → h4 → h5 → h6.
+
+2. Content Requirements:
+
+   * Write in simple human-friendly language.
+   * Explain every concept in depth.
+   * Include beginner, intermediate, advanced explanations and Supreme level explanation.
+   * Add real-world examples.
+   * Add practical use cases.
+   * Add troubleshooting sections.
+   * Add best practices.
+   * Add security considerations when applicable.
+   * Make content highly detailed and educational.
+   * Content length should be similar to a professional training module.
+   * Minimum article length is compulsory: 1,500 words.
+   * Never generate less than 1,500 words.
+   * Prefer 1,800–3,000 words whenever appropriate.
+
+3. Bootstrap Design Requirements:
+
+   * Use Bootstrap 5 cards extensively.
+   * Use:
+
+     * `card`
+     * `card-header`
+     * `card-body`
+     * `card-footer`
+     * `alert`
+     * `table-responsive`
+     * `accordion`
+     * `list-group`
+     * `badge`
+     * `breadcrumb`
+     * `row`
+     * `col-md-*`
+   * Create visually organized sections.
+   * Do not use icons.
+   * Do not use emoji.
+
+4. Code Block Requirements:
+
+   * Never use only `<pre>`.
+
+   * Always use:
+
+     ```html
+     @verbatim
+     <pre><code class="language-bash">
+     command here
+     </code></pre>
+     @endverbatim
+     ```
+
+   * Every code example must be wrapped using:
+
+     * `@verbatim`
+     * `<pre><code>`
+     * `</code></pre>`
+     * `@endverbatim`
+
+   * Add language classes:
+
+     * `language-bash`
+     * `language-python`
+     * `language-php`
+     * `language-html`
+     * `language-json`
+     * `language-yaml`
+     * `language-javascript`
+     * `language-sql`
+
+5. HTML Formatting Rules:
+
+   * Maintain proper indentation.
+   * Opening and closing tags must align correctly.
+   * Use consistent spacing.
+   * No broken formatting.
+   * No unnecessary blank lines.
+   * Keep HTML clean and readable.
+   * Structure content professionally.
+
+6. Tables:
+
+   * Use Bootstrap responsive tables.
+   * Compare concepts whenever possible.
+   * Include feature comparison tables.
+   * Include command reference tables.
+
+7. Lists:
+
+   * Use ordered and unordered lists appropriately.
+   * Use Bootstrap list groups for important points.
+
+8. Alerts:
+
+   * Use Bootstrap alerts:
+
+     * alert-primary
+     * alert-success
+     * alert-warning
+     * alert-danger
+     * alert-info
+
+9. Output Rules:
+
+   * Output only the final Laravel Blade HTML content.
+   * Do not explain your process.
+   * Do not include markdown fences.
+   * Do not include icons.
+   * Do not include emojis.
+   * Do not shorten explanations.
+   * Generate detailed production-quality educational content.
+   * Ensure the final result is visually structured, easy to read, and suitable for a professional learning platform.
+   * The article must contain a minimum of 1,500 words (compulsory).
+   * The final output must be production-ready, visually organized, professionally formatted, and must NEVER violate the heading hierarchy of:
+     → <h2>
+     → <h3>
+     → <h4>
+     → <h5>
+     → <h6>
+     <h2> → <h3> → <h4> → <h5> → <h6>
+     
+     No heading sequence violations are allowed anywhere in the document.
+     
+     For
+     

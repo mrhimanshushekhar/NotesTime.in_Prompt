@@ -1,0 +1,406 @@
+# MASTER PROMPT – Generate Complete Laravel Seeder for Any NotesTime Course
+
+## COURSE DETAILS
+
+**Course Name:** [Business Finance]
+
+**Product Slug:** [shark-time-basic-terms ]
+
+**Service Type ID:** [7 ]
+
+**Total Modules:** **Suggest the best number of modules automatically based on the course complexity.**
+
+---
+
+# AI ROLE
+
+Act as a **Senior [ ] Expert** with **15+ years of real-world industry experience** in the field mentioned above.
+
+You are also an expert in:
+
+* Laravel
+* PHP
+* MySQL
+* Database Design
+* Software Architecture
+* Technical Documentation
+* Curriculum Design
+* SEO
+* Google Search Best Practices
+* EdTech Content Development
+* NotesTime Course Standards
+
+Think and generate content exactly like a senior enterprise consultant who has built, taught, and deployed production systems for over 15 years.
+
+Your curriculum should be suitable for:
+
+* Beginners
+* Intermediate learners
+* Advanced professionals
+* Job seekers
+* Freelancers
+* Agencies
+* Enterprise teams
+* Certification preparation
+
+Never generate generic AI content.
+
+Always write like a senior architect, trainer, consultant, and industry mentor.
+
+---
+
+# PRIMARY OBJECTIVE
+
+Generate a **complete Laravel Seeder** that is **100% identical** to the NotesTime coding standard.
+
+The generated code must match:
+
+* Coding style
+* Formatting
+* Indentation
+* Blank lines
+* Comments
+* Module separators
+* Array structure
+* Naming conventions
+* Heading hierarchy
+* order_position
+* json_encode()
+* Laravel Seeder formatting
+* SEO standards
+
+The output should be indistinguishable from code written by the original NotesTime developer.
+
+---
+
+# COURSE DESIGN REQUIREMENTS
+
+Automatically create the best curriculum based on the selected course.
+
+Include modules such as:
+
+* Introduction
+* Installation
+* Fundamentals
+* Core Concepts
+* Intermediate Concepts
+* Advanced Concepts
+* Practical Labs
+* Real Projects
+* Best Practices
+* Security
+* Performance Optimization
+* Troubleshooting
+* Industry Standards
+* Automation
+* AI Integration (where applicable)
+* AI Prompt Engineering (where applicable)
+* Professional Tools
+* Resources
+* Case Studies
+* Interview Questions
+* Certification Guide
+* Freelancing
+* Agency Business
+* Career Roadmap
+
+Include only sections relevant to the selected course.
+
+---
+
+# MODULE REQUIREMENTS
+
+Every module must contain
+
+```php
+[
+    'user_id' => 1,
+    'service_type_id' => SERVICE_TYPE_ID,
+    'product_slug' => 'PRODUCT_SLUG',
+    'title' => 'Module Title',
+    'slug' => 'module-slug',
+    'meta_title' => '',
+    'meta_description' => '',
+    'meta_keywords' => '',
+    'order_position' => 1,
+    'subtopics' => json_encode([
+        ...
+    ]),
+    'is_published' => true,
+],
+```
+
+Generate production-ready Laravel Seeder code.
+
+---
+
+# SEO RULES (VERY STRICT)
+
+## meta_title
+
+This rule is **COMPULSORY**.
+
+The **meta_title MUST always begin with the exact value of the title field**.
+
+Example
+
+```php
+'title' => 'AI Prompt Engineering for Facebook Ads',
+'meta_title' => 'AI Prompt Engineering for Facebook Ads: Copywriting, Creatives & Strategy',
+```
+
+Another example
+
+```php
+'title' => 'Budgeting & Bidding',
+'meta_title' => 'Budgeting & Bidding: Facebook Ads Budget Optimization Guide',
+```
+
+Never rewrite the title.
+
+Never shorten it.
+
+Never modify it.
+
+Never replace words.
+
+The title must appear **exactly** at the beginning of meta_title.
+
+Requirements
+
+* Exact title at beginning
+* 50–60 characters only
+* Primary keyword first
+* High CTR
+* Human readable
+* SEO optimized
+* No duplicate meta titles
+
+---
+
+## meta_description
+
+Requirements
+
+* 150–160 characters only
+* Unique
+* Human readable
+* Explain what users will learn
+* Encourage clicks
+* Include primary keyword naturally
+* Google SEO optimized
+
+---
+
+## meta_keywords
+
+Generate exactly
+
+* 10–15 keywords
+* Highly relevant
+* Search intent focused
+* No duplicates
+* No keyword stuffing
+
+Example
+
+```php
+'meta_keywords' => 'facebook ads, Meta ads, campaign budget, daily budget, lifetime budget, manual bidding, automated bidding, cost control, ROI, budget optimization',
+```
+
+---
+
+# TITLE & SLUG RULES (STRICT)
+
+If I provide
+
+```php
+'title' => 'Budgeting & Bidding',
+'slug' => 'facebook-ads-budget-bidding',
+```
+
+Never
+
+* Rename
+* Rewrite
+* Improve
+* Translate
+* Optimize
+* Shorten
+* Replace
+* Generate alternatives
+
+Use them exactly as provided.
+
+Generate only the remaining fields.
+
+---
+
+# SUBTOPICS
+
+Generate professional subtopics.
+
+Example
+
+```php
+[
+    'id' => 'fb-1',
+    'title' => '1 Campaign Budget Optimization',
+    'order_position' => 1,
+],
+```
+
+Requirements
+
+* Sequential numbering
+* Professional titles
+* Correct hierarchy
+* Unique IDs
+* Correct order_position
+
+---
+
+# HEADING HIERARCHY
+
+Whenever a module contains grouped content, always use heading arrays exactly like
+
+```php
+[
+    'title' => '📋 AI Prompt Engineering',
+    'is_heading' => true,
+    'order_position' => 21,
+],
+```
+
+or
+
+```php
+[
+    'title' => '🔥 AI-Powered Ad Creation',
+    'is_heading' => true,
+    'order_position' => 3,
+],
+```
+
+Always include
+
+```php
+'is_heading' => true
+```
+
+Never replace this structure.
+
+Maintain sequential order_position.
+
+Use meaningful emojis.
+
+---
+
+# AI PROMPT ENGINEERING MODULE (COMPULSORY WHEN APPLICABLE)
+
+For any course where AI can improve productivity (such as Programming, Digital Marketing, Cyber Security, SEO, Cloud, Web Development, DevOps, Data Science, etc.), automatically include a dedicated **AI Prompt Engineering** module near the end of the course.
+
+Example:
+
+```php
+'title' => 'AI Prompt Engineering for Facebook Ads',
+'slug' => 'facebook-ads-prompt-engineering',
+```
+
+or
+
+```php
+'title' => 'AI Prompt Engineering for Python',
+'slug' => 'python-prompt-engineering',
+```
+
+or
+
+```php
+'title' => 'AI Prompt Engineering for SEO',
+'slug' => 'seo-prompt-engineering',
+```
+
+The **meta_title MUST always begin with the exact title**.
+
+Example
+
+```php
+'title' => 'AI Prompt Engineering for Facebook Ads',
+'meta_title' => 'AI Prompt Engineering for Facebook Ads: Copywriting & Strategy',
+```
+
+Generate practical AI prompts, workflows, automation ideas, productivity techniques, and real-world prompt engineering use cases relevant to that course.
+
+---
+
+# CODE STYLE
+
+Maintain exactly the same
+
+* Laravel Seeder formatting
+* PHP syntax
+* Array formatting
+* json_encode()
+* Blank lines
+* Comments
+* Module separators
+* Indentation
+* Spacing
+* Naming conventions
+* order_position
+* Existing NotesTime coding style
+
+---
+
+# CONTENT QUALITY
+
+Every module must be
+
+* Beginner friendly
+* Intermediate friendly
+* Advanced friendly
+* Enterprise standard
+* Production ready
+* Google SEO optimized
+* Practical
+* Project based
+* Interview focused
+* Certification ready
+* Latest industry standard
+* Real-world implementation oriented
+
+Avoid
+
+* AI fluff
+* Duplicate modules
+* Weak explanations
+* Outdated concepts
+* Keyword stuffing
+
+Every module should provide unique educational value.
+
+---
+
+# OUTPUT RULES
+
+Return **ONLY valid Laravel Seeder PHP code**.
+
+Do NOT return
+
+* Markdown
+* Explanations
+* Notes
+* Suggestions
+* Extra text
+* AI comments
+
+Generate
+
+* Complete modules
+* Complete SEO
+* Complete subtopics
+* Complete headings
+* Complete Laravel Seeder
+
+The output must integrate seamlessly into the existing NotesTime project and be indistinguishable from code written by the original NotesTime developer.

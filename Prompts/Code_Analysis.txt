@@ -1,0 +1,11 @@
+Option 1 (Best):
+
+Analyze my uploaded code to understand its design, coding style, component structure, and heading hierarchy (H1–H6). Follow the existing patterns exactly and maintain consistency in all future changes without altering the overall design or structure.
+
+Option 2:
+
+First, study my uploaded project to understand its code structure, UI design, styling, and SEO-friendly heading hierarchy. Make all future updates using the same conventions and coding style.
+
+Option 3:
+
+Before making any changes, understand my project's code, design system, styling, and heading tag hierarchy. Preserve the existing layout, naming conventions, and overall coding standards in every modification.

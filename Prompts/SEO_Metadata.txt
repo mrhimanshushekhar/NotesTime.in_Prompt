@@ -1,0 +1,32 @@
+Generate SEO metadata for the following product.
+
+Input:
+- Product Name: {product_name}
+- Slug: {slug}
+
+Requirements:
+
+1. Meta Title
+- Maximum 60 characters.
+- Include the exact product name.
+- Make it engaging, SEO-friendly, and clickable.
+- Avoid keyword stuffing.
+
+2. Meta Description
+- Maximum 160 characters.
+- Start with "Learn" whenever possible.
+- Clearly describe what users will learn.
+- Include the primary keyword naturally.
+- Encourage clicks while remaining informative.
+
+3. Meta Keywords
+- Generate 10–15 unique, comma-separated keywords.
+- The first keyword must be the exact product name.
+- Include related technologies, synonyms, use cases, and search intent keywords.
+- Do not repeat keywords.
+
+Output only:
+
+meta_title:
+meta_description:
+meta_keywords:
